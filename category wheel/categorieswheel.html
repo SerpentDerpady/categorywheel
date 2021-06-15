@@ -1,0 +1,125 @@
+<style>
+  .circle-container {
+      position: relative;
+      width: 24em;
+      height: 24em;
+      padding: 2.8em;
+      /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
+      border: solid 5px;
+      border-radius: 50%;
+      border-color: #202C39;
+      margin: 1.75em auto 0;
+      background-color:  #283845
+  }
+  .circle-container a {
+      display: block;
+      position: absolute;
+      top: 41%; left: 41%;
+      width: 9em; height: 9em;
+      margin: -2em;
+  }
+  .circle-container img { display: block; width: 100%; }
+  .deg0 { transform: rotate(0deg) translate(12em); } /* 12em = half the width of the wrapper */
+  .deg45 { transform: rotate(55deg) translate(12em) rotate(-45deg); }
+  .deg135 { transform: rotate(125deg) translate(12em) rotate(-135deg); }
+  .deg180 { transform: translate(-12em); }
+  .deg225 { transform: rotate(235deg) translate(12em) rotate(-225deg); }
+  .deg315 { transform: rotate(305deg) translate(12em) rotate(-315deg); }
+
+  .container {
+    position: relative;
+    width: 50%;
+    display: block;
+    position: absolute;
+    top: 20%; left: 27%;
+    width: 9em; height: 9em;
+    margin: -2em;
+  }
+
+  .image {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .container:hover .image {
+    opacity: 1;
+  }
+
+  .container:hover .middle {
+    opacity: 1;
+  }
+
+  .text {
+    width: 82px;
+    height: 115px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    padding: 16px 32px;
+    border-radius: 50%;
+  }
+</style>
+
+<div class='circle-container'>
+    <a href='#' class='center'>
+      <div class="container">
+        <img src="logo.png" alt="Avatar" class="image" style="width:100%; border-radius: 50%;">
+        <div class="middle">
+          <div class="text">CYYE</div>
+        </div>
+      </div></a>
+      <a href='#' class='deg0'>
+        <div style="transform: rotate(0deg)"  class="container">
+          <img src="image.png" alt="Avatar" class="image" style="background-color: #F75250; width:100%; border-radius: 50%;">
+          <div class="middle">
+            <div class="text">This is an area to put a small blurb on the topic</div>
+          </div>
+        </div></a>
+        <a href='#' class='deg45'>
+          <div style="transform: rotate(-10deg)"  class="container">
+            <img src="image.png" alt="Avatar" class="image" style="background-color: #F29559; width:100%; border-radius: 50%;">
+            <div class="middle">
+              <div class="text">This is an area to put a small blurb on the topic</div>
+            </div>
+          </div></a>
+          <a href='#' class='deg135'>
+            <div style="transform: rotate(10deg)"  class="container">
+              <img src="image.png" alt="Avatar" class="image" style="background-color: #72AD5C; width:100%; border-radius: 50%;">
+              <div class="middle">
+                <div class="text">This is an area to put a small blurb on the topic</div>
+              </div>
+            </div></a>
+            <a href='#' class='deg180'>
+              <div style="transform: rotate(0deg)"  class="container">
+                <img src="image.png" alt="Avatar" class="image" style="background-color: #597E9B; width:100%; border-radius: 50%;">
+                <div class="middle">
+                  <div class="text">1This is an area to put a small blurb on the topic</div>
+                </div>
+              </div></a>
+              <a href='#' class='deg225'>
+                <div style="transform: rotate(-10deg)"  class="container">
+                  <img src="image.png" alt="Avatar" class="image" style="background-color: #917396; width:100%; border-radius: 50%;">
+                  <div class="middle">
+                    <div class="text">This is an area to put a small blurb on the topic</div>
+                  </div>
+                </div></a>
+                <a href='#' class='deg315'>
+                  <div style="transform: rotate(10deg)"  class="container">
+                    <img src="image.png" alt="Avatar" class="image" style="background-color: #E773B3; width:100%; border-radius: 50%;">
+                    <div class="middle">
+                      <div class="text">This is an area to put a small blurb on the topic</div>
+                    </div>
+                  </div></a>
+</div>
